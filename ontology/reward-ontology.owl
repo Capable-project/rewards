@@ -215,14 +215,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#number_where_the_penalty_starts -->
+    <!-- http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#number_of_units_where_the_penalty_starts -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#number_where_the_penalty_starts">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#number_of_units_where_the_penalty_starts">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Elementary_compliance_reward"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <obo:IAO_0000115>The penalty starts on this number of units practiced. For example if the number indicated is 5, then if 5 units were practiced then on unit 5 points are already deducted</obo:IAO_0000115>
     </owl:DatatypeProperty>
     
 
@@ -484,7 +481,7 @@ There may be cases where users may be awarded with points or penalized due to ei
         <Rewards-SATO:related_to_bci rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Tai_Chi_BCI"/>
         <Rewards-SATO:interval_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</Rewards-SATO:interval_amount>
         <Rewards-SATO:minimum_number_of_units rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</Rewards-SATO:minimum_number_of_units>
-        <Rewards-SATO:number_where_the_penalty_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</Rewards-SATO:number_where_the_penalty_starts>
+        <Rewards-SATO:number_of_units_where_the_penalty_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</Rewards-SATO:number_of_units_where_the_penalty_starts>
         <Rewards-SATO:recommended_number_of_units rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</Rewards-SATO:recommended_number_of_units>
         <Rewards-SATO:use_negative_bonus_slope_for_penalty_curve rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Rewards-SATO:use_negative_bonus_slope_for_penalty_curve>
     </owl:NamedIndividual>
@@ -620,7 +617,7 @@ There may be cases where users may be awarded with points or penalized due to ei
         <Rewards-SATO:minimum_number_of_units rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</Rewards-SATO:minimum_number_of_units>
         <Rewards-SATO:number_of_sessions_where_the_penalty_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</Rewards-SATO:number_of_sessions_where_the_penalty_starts>
         <Rewards-SATO:number_of_sessionswhere_the_maximum_bonus_is_reached rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</Rewards-SATO:number_of_sessionswhere_the_maximum_bonus_is_reached>
-        <Rewards-SATO:number_where_the_penalty_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</Rewards-SATO:number_where_the_penalty_starts>
+        <Rewards-SATO:number_of_units_where_the_penalty_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</Rewards-SATO:number_of_units_where_the_penalty_starts>
         <Rewards-SATO:recommended_number_of_sessions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</Rewards-SATO:recommended_number_of_sessions>
         <Rewards-SATO:recommended_number_of_units rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</Rewards-SATO:recommended_number_of_units>
         <Rewards-SATO:use_negative_bonus_slope_for_penalty_curve rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Rewards-SATO:use_negative_bonus_slope_for_penalty_curve>
@@ -653,7 +650,7 @@ There may be cases where users may be awarded with points or penalized due to ei
         <Rewards-SATO:related_to_bci rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Deep_Breathing_BCI"/>
         <Rewards-SATO:interval_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</Rewards-SATO:interval_amount>
         <Rewards-SATO:minimum_number_of_units rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</Rewards-SATO:minimum_number_of_units>
-        <Rewards-SATO:number_where_the_penalty_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</Rewards-SATO:number_where_the_penalty_starts>
+        <Rewards-SATO:number_of_units_where_the_penalty_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</Rewards-SATO:number_of_units_where_the_penalty_starts>
         <Rewards-SATO:recommended_number_of_units rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</Rewards-SATO:recommended_number_of_units>
         <Rewards-SATO:use_negative_bonus_slope_for_penalty_curve rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Rewards-SATO:use_negative_bonus_slope_for_penalty_curve>
     </owl:NamedIndividual>
