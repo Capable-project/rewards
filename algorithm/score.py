@@ -5,7 +5,7 @@ import numpy as np
 class Compliance:
     def __init__(self, min, recommended, max_bonus, start_of_penalty, end_of_penalty=None):
         # start_of_penalty is the first unit or session where penalty is > 0. This should be taken into account
-        # when calculating the points using np.interp or when plotting the points\
+        # when calculating the points using np.interp or when plotting the points.
         if end_of_penalty is None:
             end_of_penalty = start_of_penalty if recommended == max_bonus \
                 else start_of_penalty - 1 + 2*(max_bonus - recommended)
@@ -37,7 +37,7 @@ class Score:
 
     FIGSIZE = (6, 2)
 
-    def __init__(self, units, sessions=SINGLE_SESSION, description=""):
+    def __init__(self, units, sessions=SINGLE_SESSION, description=None, unit_description=None):
         self.units = units
         self.sessions = sessions
         if self.sessions.recommended() > 0:
@@ -46,7 +46,8 @@ class Score:
         else:
             max_score = min_score = 100
         self.score = [min_score, max_score, 2 * max_score, 2 * max_score, 0]
-        self.description = description
+        self.description = "" if description is None else description
+        self.unit_description = unit_description
 
     def _get_score(self, session_units):
         return 0 if session_units < self.units.min() else np.interp(session_units, self.units.params, self.score)
@@ -64,9 +65,9 @@ class Score:
 
         plt.figure(figsize=Score.FIGSIZE)
         plt.plot(x, y, linestyle='dashed', color=c)
-        plt.xlabel('units')
         plt.ylabel('score')
         plt.title(f'{self.description} [units]')
+        plt.xlabel('units' if self.unit_description is None else self.unit_description)
         return self
 
     @staticmethod
@@ -126,7 +127,7 @@ class Score:
 
         return {Score.SORTED: session_scores, Score.ACCUMULATED: accumulated_scores}
 
-    def plot_session_score(self, session_units):
+    def plot_session_score(self, session_units, show_labels=True):
         session_units = self._to_list(session_units)
         self._plot()
 
@@ -134,15 +135,12 @@ class Score:
         for (i, u) in enumerate(session_units):
             score = self._get_score(u)
             symbol = 'go' if score >= 0 else 'ro'
-            if u < self.units.min():
-                plt.plot(self.units.params[0], score, symbol)
-            elif u > self.units.params[-1]:
-                plt.plot(self.units.params[-1], score, symbol)
-            else:
-                plt.hlines(score, 0, u, color='green', linestyles='dotted')
-                plt.vlines(u, 0, score, color='green', linestyles='dotted')
+            # print(f"u = {u} s = {score:.2f}")
+            plt.hlines(score, 0, u, color='green', linestyles='dotted')
+            plt.vlines(u, 0, score, color='green', linestyles='dotted')
+            plt.plot(u, score, symbol)
+            if show_labels:
                 label = f"(u = {u} s = {score:.2f})"
-                plt.plot(u, score, symbol)
                 plt.text(u, score + 2, label)
         plt.show()
 
