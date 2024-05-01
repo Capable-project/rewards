@@ -8,6 +8,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sssom="https://w3id.org/sssom/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org/"
      xmlns:Property="https://www.wikidata.org/wiki/Property:"
@@ -62,7 +63,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Logical_combination_reward"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Logical_combination_reward"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistent_elementary_pattern_reward"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistence_elementary_pattern_reward"/>
     </owl:ObjectProperty>
     
 
@@ -281,7 +282,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#times">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Logical_combination_reward"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistent_elementary_pattern_reward"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistence_elementary_pattern_reward"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -359,9 +360,9 @@ There may be cases where users may be awarded with points or penalized due to ei
     
 
 
-    <!-- http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistent_elementary_pattern_reward -->
+    <!-- http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistence_elementary_pattern_reward -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistent_elementary_pattern_reward">
+    <owl:Class rdf:about="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistence_elementary_pattern_reward">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#intervention_reward"/>
         <obo:IAO_0000115>Persistent_Elementary_Pattern_Reward is a temporal pattern over a single Elmentary_Temporal_Reward pattern (e.g., persistent occurrence for 5 times in 1 week of the elementary compliance pattern of Tai Chi at least once a day, or persistent occurrence of 10 times in 12 months of the elementary compliance pattern of Tai Chi at least once a day).</obo:IAO_0000115>
     </owl:Class>
@@ -515,7 +516,7 @@ There may be cases where users may be awarded with points or penalized due to ei
     <!-- http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Ten_time_Tai_Chi -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Ten_time_Tai_Chi">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistent_elementary_pattern_reward"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistence_elementary_pattern_reward"/>
         <Rewards-SATO:associated_with_elementary_reward rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Once_a_day_Tai_Chi"/>
         <Rewards-SATO:has_comparison_operator rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#lte"/>
         <Rewards-SATO:has_unit_of_measure rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#month"/>
@@ -660,7 +661,7 @@ There may be cases where users may be awarded with points or penalized due to ei
     <!-- http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#5_day_a_week_compliance_to_Deep_breathing_at_least_1_a_day -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#5_day_a_week_compliance_to_Deep_breathing_at_least_1_a_day">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistent_elementary_pattern_reward"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistence_elementary_pattern_reward"/>
         <Rewards-SATO:associated_with_elementary_reward rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#2_minutes_Deep_Breathing_once_a_day_elementary_compliance_reward"/>
         <Rewards-SATO:has_comparison_operator rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#gte"/>
         <Rewards-SATO:has_time_interval_type rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#week"/>
@@ -673,7 +674,7 @@ There may be cases where users may be awarded with points or penalized due to ei
     <!-- http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#6_days_a_week_compliance_to&#45;&#45;_Tai_Chi_at_least_5_min_at_least_1_a_day -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#6_days_a_week_compliance_to--_Tai_Chi_at_least_5_min_at_least_1_a_day">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistent_elementary_pattern_reward"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Persistence_elementary_pattern_reward"/>
         <Rewards-SATO:associated_with_elementary_reward rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#Once_a_day_Tai_Chi"/>
         <Rewards-SATO:has_comparison_operator rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#gte"/>
         <Rewards-SATO:has_time_interval_type rdf:resource="http://www.semanticweb.org/mor/ontologies/2023/8/Rewards-SATO#week"/>
